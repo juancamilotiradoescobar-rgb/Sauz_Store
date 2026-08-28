@@ -48,9 +48,7 @@ public class Usuario {
         return correo;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
+    public void setCorreo(String correo) { if (correo == null || !correo.contains("@")) { throw new IllegalArgumentException("El correo ingresado no es válido"); } this.correo = correo; }
 
     public String getTelefono() {
         return telefono;
